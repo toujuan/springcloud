@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: brand-api
+  devtools:
+    livereload:
+      port: 35720
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/students2025?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: henry0511
+  #nacos服务中心配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: henry0511
+        namespace: baaf79eb-c3a8-40d6-9ce1-7fc8698294bd
+        group: group1
+server:
+  port: 9000
+mybatis-plus:
+  configuration:
+    log-prefix: mybatis.
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    lazy-loading-enabled: true
+    cache-enabled: false
+  type-aliases-package: org.example.scabrandms.model
+  mapper-locations: classpath*:/mapper/**/*.xml
+

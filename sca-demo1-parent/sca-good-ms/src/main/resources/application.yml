@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: good-api
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/students2025?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: henry0511
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: henry0511
+        namespace: baaf79eb-c3a8-40d6-9ce1-7fc8698294bd
+        group: group1
+        port: 9002
+
+  devtools:
+    livereload:
+      port: 35722
+
+server:
+  port: 9002
